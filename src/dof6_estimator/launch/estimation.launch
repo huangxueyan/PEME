@@ -1,0 +1,10 @@
+<launch>
+  <node name="dof6_estimator" pkg="dof6_estimator" type="dof6_estimator_node" output="screen">
+  
+    <!-- <param name="filename" type="string" value="$(find event_publisher)/config/config.yaml" /> -->
+    <param name="yaml" type="string" value="$(find dof6_estimator)/config/config.yaml" />
+    <param name="reader_yaml" type="string" value="$(find event_publisher)/config/config.yaml" />
+
+  </node>
+
+</launch>

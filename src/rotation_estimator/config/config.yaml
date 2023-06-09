@@ -1,0 +1,53 @@
+%YAML:1.0
+
+Version: 1.0
+
+#--------------------------------------------------------------------------------------------
+# General Parameters
+#--------------------------------------------------------------------------------------------
+
+
+#--------------------------------------------------------------------------------------------
+# General Parameters (fixed).
+#--------------------------------------------------------------------------------------------
+# original image size for camera
+# width: 240
+# height: 180
+
+#--------------------------------------------------------------------------------------------
+# Input Parameters
+#--------------------------------------------------------------------------------------------
+# groundtruth_dir: "/home/hxy/Documents/rosbag/Mono-unzip/poster_rotation/events.txt"
+# groundtruth_dir: "/home/hxy/Documents/rosbag/Mono-unzip/dynamic_rotation/events.txt"
+groundtruth_dir: "/home/hxy/Documents/rosbag/Mono-unzip/boxes_rotation/events.txt"
+# groundtruth_dir: "/home/hxy/Documents/rosbag/Mono-unzip/shapes_rotation/events.txt"
+output_dir: "/home/hxy/Desktop/data/rotation_estimation/poster_rotation/test_second_order_size30k_double_warp_"
+
+yaml_sample_count: 30000
+yaml_iter_num: 10
+yaml_ceres_iter_num: 10
+yaml_ceres_iter_thread: 8
+yaml_ts_start: 0.8
+yaml_ts_end: 0.8
+yaml_denoise_num: 4
+yaml_gaussian_size: 5
+yaml_gaussian_size_sigma: 1
+yaml_default_value_factor: 1
+yaml_ros_starttime: 0 # poster 1468940145.2311351, boxes 1468940843.8233166, dynamic 1473347265.9092634
+# 2.7e7~3.1e7 for dynamic 
+# 5.7e6~5.9e6 for shapes 
+# you can use 
+read_start_lines: 0e4
+read_max_lines: 25000e4
+# read_start_lines: 1000e4
+# read_max_lines: 1090e4
+
+
+#--------------------------------------------------------------------------------------------
+# Event Parameters
+#--------------------------------------------------------------------------------------------
+Event.delta_time: 0.01
+using_fixed_time: 0  # 1 means true
+
+fixed_interval: 0.02
+Event.bundle_size: 3e4 

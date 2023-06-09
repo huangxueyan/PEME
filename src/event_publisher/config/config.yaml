@@ -1,0 +1,36 @@
+%YAML:1.0
+
+Version: 1.0
+
+#--------------------------------------------------------------------------------------------
+# General Parameters (fixed).
+#--------------------------------------------------------------------------------------------
+# original image size for camera
+width: 240
+height: 180
+
+
+# groundtruth 
+groundtruth_dir: "/home/hxy/Documents/rosbag/Mono-unzip/poster_rotation/events.txt"
+# groundtruth_dir: "/home/hxy/Documents/rosbag/Mono-unzip/shapes_rotation/events.txt"
+# groundtruth_dir: "/home/hxy/Documents/rosbag/Mono-unzip/boxes_rotation/events.txt"
+# groundtruth_dir: "/home/hxy/Documents/rosbag/Mono-unzip/dynamic_rotation/events.txt"
+
+# groundtruth_dir: "/home/hxy/Desktop/Event-ST-PPP/dataset/dynamic_rotation/events.txt"
+
+# 2.7e7~3.1e7 for dynamic 
+# 5.7e6~5.9e6 for shapes 
+read_start_lines: 0e4
+read_max_lines: 3e7
+#--------------------------------------------------------------------------------------------
+# Event Parameters (tunable).
+#--------------------------------------------------------------------------------------------
+# size of real targets
+# Event.delta_time: 0.01
+using_fixed_time: 1  # 1 means true
+store2txt: 0         # 1 means true
+
+fixed_interval: 0.02
+Event.bundle_size: 3e4 
+sleep_rate: 0.5  # 10Hz
+

@@ -1,0 +1,18 @@
+<launch>
+  <node name="event_publisher" pkg="event_publisher" type="event_publisher" output="screen">
+    <remap from="/events" to="/dvs/events" />
+    <remap from="/imu" to="/dvs/imu" />
+    <remap from="/image" to="/dvs/image_raw" />
+    <remap from="/renderer" to="/dvs/renderer" />
+
+    <!-- <param name="filename" type="string" value="/home/hxy/Documents/rosbag/Zhu-RAL/indoor_flying1" /> -->
+    <param name="filename" type="string" value="/home/hxy/Documents/rosbag/Zhu-RAL/outdoor_driving1" />
+    <param name="yaml" type="string" value="$(find event_publisher)/config/config_depth.yaml" />
+    <param name="loop" type="bool" value="false" />
+  </node>
+
+  <!-- display -->
+  <!-- <node name="image_view" pkg="rqt_image_view" type="rqt_image_view">
+  	<remap from="image" to="rendering"/>
+  </node> -->
+</launch>

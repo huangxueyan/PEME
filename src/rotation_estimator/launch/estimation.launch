@@ -1,0 +1,10 @@
+<launch>
+  <node name="rotation_estimator" pkg="rotation_estimator" type="rotation_estimator_node" output="screen">
+  
+    <!-- <param name="filename" type="string" value="$(find event_publisher)/config/config.yaml" /> -->
+    <param name="yaml" type="string" value="$(find rotation_estimator)/config/config.yaml" />
+    <param name="reader_yaml" type="string" value="$(find event_publisher)/config/config.yaml" />
+
+  </node>
+
+</launch>
