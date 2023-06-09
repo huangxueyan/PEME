@@ -1,16 +1,21 @@
-# **P**rogessive Spatio-temporal Alignment for Efficient **E**vent-based **M**otion **E**stimation (PEME)
+# [CVPR2023] **P**rogessive Spatio-temporal Alignment for Efficient **E**vent-based **M**otion **E**stimation (PEME)
 
+Xueyan Huang, Yueyi Zhang*, Zhiwei Xiong
+
+*Corresponding Author
+
+University of Science and Technology of China (USTC), Hefei, China
 
 
 ## How to run
-### clone and build: 
+1. clone and build: 
 
     git clone https://github.com/huangxueyan/PEME.git
     catkin_make 
 
-### edit config file 
+2. edit config file 
 edit src/rotation_estimator/config/config.yaml when you want to test our model with different datasets.
-
+3. roslaunch src/rotation_estimator/launch/estimation.launch
 
 ## Evaluation
 We evaluate our model using the same metrics as used in the https://github.com/pbideau/Event-ST-PPP repository
